@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sales-system-app
+    volumes:
+      - .:/Users/softradix/Documents/PHP/acme-widget-co
+    working_dir: /Users/softradix/Documents/PHP/acme-widget-co
+    ports:
+      - "8000:8000"
+    tty: true
+    command: php -S 0.0.0.0:8000 -t /Users/softradix/Documents/PHP/acme-widget-co
+    environment:
+      - COMPOSER_ALLOW_SUPERUSER=1
+    networks:
+      - app-network
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sales-system-tests
+    volumes:
+      - .:/Users/softradix/Documents/PHP/acme-widget-co
+    working_dir: /Users/softradix/Documents/PHP/acme-widget-co
+    entrypoint: vendor/bin/phpunit
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

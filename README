@@ -1,0 +1,14 @@
+How It Works
+Catalogue: A list of available products with code, name, and price.
+Basket: Maintains products, applies special offers, calculates delivery.
+Delivery Rules: Configurable rules for delivery costs.
+Special Offers: Easily extendable for various promotions.
+
+Running the Project
+Build the container with Docker: docker-compose up --build.
+Run tests: docker exec -it app-container vendor/bin/phpunit.
+
+Assumptions
+All products have unique codes.
+Discounts apply only once per pair (e.g., "Buy 1 Get 1 Half Off").
+Delivery rules are tiered with no overlaps.

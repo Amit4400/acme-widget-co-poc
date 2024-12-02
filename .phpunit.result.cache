@@ -1,0 +1,1 @@
+{"version":1,"defects":{"BasketTest::testBasketCalculatesTotalCorrectly":7,"ProductTest::testProductHandlesInvalidData":7},"times":{"BasketTest::testBasketCalculatesTotalCorrectly":0.007,"ProductTest::testProductInitialization":0,"ProductTest::testProductHandlesEdgeCases":0,"ProductTest::testProductHandlesInvalidData":0.012}}
