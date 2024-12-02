@@ -41,10 +41,14 @@ class BasketTest extends TestCase
         $calculatedTotal2 = $basket2->total();
         $calculatedTotal3 = $basket3->total();
         $calculatedTotal4 = $basket4->total();
-        
+        printf("\n");
+        var_dump($calculatedTotal1);
         $this->assertEquals(37.85, $calculatedTotal1);
+        var_dump($calculatedTotal2);
         $this->assertEquals(54.37, $calculatedTotal2);
+        var_dump($calculatedTotal3);
         $this->assertEquals(60.85, $calculatedTotal3);
+        var_dump($calculatedTotal4);
         $this->assertEquals(98.27, $calculatedTotal4);
     }
 
